@@ -3,6 +3,18 @@
 Configured to use redis as a message broker for logstash, based on
 [sebp/elk](https://registry.hub.docker.com/u/sebp/elk/).
 
+## Running
+
+When running the image ensure you expose the appropriate ports (5601, 9200) and
+set the `REDIS_HOST` environment variable. Here's an example run command:
+
+```
+sudo docker run -it --name elk \
+		 -p 5601:5601 -p 9200:9200 \
+		 -e REDIS_HOST=some-redis-host \
+		 codenow-elk
+```
+
 ## Ports
 When run as a container the image exposes the following ports:
 
