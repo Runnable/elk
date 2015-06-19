@@ -72,7 +72,9 @@ RUN sed -i -e 's#^KIBANA_HOME=$#KIBANA_HOME='$KIBANA_HOME'#' /etc/init.d/kibana4
 ###############################################################################
 
 ADD ./elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
-ADD ./logstash.conf /etc/logstash/conf.d/logstash.conf
+ADD ./10-input.conf /etc/logstash/conf.d/10-input.conf
+ADD ./20-filter.conf /etc/logstash/conf.d/20-filter.conf
+ADD ./30-output.conf /etc/logstash/conf.d/30-output.conf
 
 ###############################################################################
 #                                   START

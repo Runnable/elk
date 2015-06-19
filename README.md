@@ -24,7 +24,9 @@ When run as a container the image exposes the following ports:
 ## Important Files
 
 * `Dockerfile` - Dockerfile to build the ELK image
-* `logstash.conf` - Logstash configuration
+* `10-input.conf` - Default logstash input configuration
+* `20-filter.conf` - Default logstash filters configuration
+* `30-output.conf` - Default logstash output configuration
 * `elasticsearch.yml` - Elastic search configuration
 * `start.sh` - Runs all services and tails the elasticsearch logs.
 
