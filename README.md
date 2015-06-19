@@ -47,3 +47,4 @@ Currently we support the following environment variables in the logstash
 configuration script:
 
 * `REDIS_HOST` - Hostname for the redis message broker.
+* `REDIS_PORT` - Port for the redis message broker.

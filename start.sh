@@ -9,6 +9,9 @@
 sed -i "s/{{REDIS_HOST}}/$REDIS_HOST/g" /etc/logstash/conf.d/10-input.conf
 sed -i "s/{{REDIS_HOST}}/$REDIS_HOST/g" /etc/logstash/conf.d/20-filter.conf
 sed -i "s/{{REDIS_HOST}}/$REDIS_HOST/g" /etc/logstash/conf.d/30-output.conf
+sed -i "s/{{REDIS_PORT}}/$REDIS_PORT/g" /etc/logstash/conf.d/10-input.conf
+sed -i "s/{{REDIS_PORT}}/$REDIS_PORT/g" /etc/logstash/conf.d/20-filter.conf
+sed -i "s/{{REDIS_PORT}}/$REDIS_PORT/g" /etc/logstash/conf.d/30-output.conf
 
 # Start elasticsearch and logstash
 service elasticsearch start
