@@ -13,6 +13,9 @@ sed -i "s/{{REDIS_PORT}}/$REDIS_PORT/g" /etc/logstash/conf.d/10-input.conf
 sed -i "s/{{REDIS_PORT}}/$REDIS_PORT/g" /etc/logstash/conf.d/20-filter.conf
 sed -i "s/{{REDIS_PORT}}/$REDIS_PORT/g" /etc/logstash/conf.d/30-output.conf
 
+# Change permissions for mounted data volumes
+chown -R elasticsearch:elasticsearch /var/lib/elasticsearch/elasticsearch
+
 # Start elasticsearch and logstash
 service elasticsearch start
 service logstash start
